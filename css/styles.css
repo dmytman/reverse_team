@@ -1,0 +1,21 @@
+.main{
+    background-image: url("../images/navi_log_eckground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.card_wrapper{
+    margin: 0 auto;
+    width: 866px;
+    height: 884px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.logo_photo{
+    width: 180px;
+    height: 249px;
+    display: flex;
+}
+
