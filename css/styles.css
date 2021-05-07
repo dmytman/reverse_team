@@ -1,22 +1,44 @@
-.main{
+ .main{
     background-image: url("../images/navi_log_eckground.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
 }
 
-.card_wrapper{
-    margin: 0 auto;
-    width: 866px;
-    height: 884px;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-between;
-}
-
-.logo_photo{
+.scene {
     width: 180px;
-    height: 249px;
-    display: flex;
+    height: 250px;
+    margin: 40px 0;
+    perspective: 600px;
 }
 
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+}
+
+.card.is-flipped {
+     transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 260px;
+    backface-visibility: hidden;
+}
+
+.card__face--front {
+    background-image: url(/images/rybaska.png);
+}
+
+.card__face--back {
+    background: blue;
+    transform: rotateY(180deg);
+}
