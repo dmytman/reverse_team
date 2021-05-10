@@ -1,11 +1,17 @@
-let card = document.querySelector('.card');
+let cards = [...document.querySelectorAll('.inner')];
+console.log(cards);
 
-card.addEventListener('click', function () {
-    card.classList.toggle('is-flipped');
-});
+var card = document.querySelector('.inner');
+    card.addEventListener('click', function () {
+        card.classList.toggle('is-flipped');
+    });
 
-// for (var i = 0; i < card.length; i++) {
-//     card[i].addEventListener('click', function () {
-//         card.classList.toggle('is-flipped');
-//     });
-//     }
+const randomCsa = () => {
+    cards.map(card => card.style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`);
+
+    cards.map(card => card.style.order = Math.floor(Math.random() * cards.length));
+    
+};
+
+randomCsa();
+
