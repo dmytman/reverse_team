@@ -1,7 +1,7 @@
 let cards = [...document.querySelectorAll('.inner')];
 console.log(cards);
 
-var card = document.querySelector('.inner');
+let card = document.querySelector('.inner');
     card.addEventListener('click', function () {
         card.classList.toggle('is-flipped');
     });
@@ -15,3 +15,4 @@ const randomCsa = () => {
 
 randomCsa();
 
+const random = function('click')

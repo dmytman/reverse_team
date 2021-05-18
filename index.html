@@ -1,23 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./css/styles.css"/>
+    <link rel="icon" href="./images/05c879d8d0a6337bc9cbabbe9480a6dc.jpg" type="images/jpg">
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <main class="main">
-        <section class="button_wrapper">
-            <a class="button_start button" href="./index-lvl1.html">start</a>
-            <a class="button_start button" href="">options</a>
-            <a class="button_start button" href="">learn more</a>
-        </section>
+      <section class="button_wrapper">
+        <a class="button_start button" href="./index-lvl1.html">start</a>
+        <a class="button_start button" href="#openModal">options</a>
+        <a class="button_start button" href="#open-Modal">learn more</a>
+
+        <div id="openModal" class="modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title">levels</h3>
+                <a href="#close" title="Close" class="close">×</a>
+              </div>
+              <div class="modal-body">
+                <p>Содержимое модального окна...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="open-Modal" class="modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title">How play</h3>
+                <a href="#close" title="Close" class="close">×</a>
+              </div>
+              <div class="modal-body">
+                <p>Игроку предлагается поле с некоторым количеством разных по оформлению, цвету и форме объектов. Задача простая – найти два одинаковых объекта. Кажется, что это слишком легко? Игра продолжается до момента истечения времени или до завершения жизней, которые теряются в результате неправильных ответов. Внимательно после игры оцените свои результаты, сопоставив их с предыдущими играми. В любой момент можно из личного кабинета анализировать динамику развития своей личности, в том числе и после прохождения тренировок в программе «Найди пару».</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
     </main>
-
-</body>
-
+  </body>
 </html>
