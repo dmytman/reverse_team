@@ -1,5 +1,6 @@
 @import "./reset.css";
 @import "./styles-lvl1.css";
+@import "./fonts.css";
 
 .main {
   background-image: url("../images/csgo_background.jpg");
