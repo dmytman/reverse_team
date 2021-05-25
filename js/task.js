@@ -1,5 +1,6 @@
 let firstCard;
 let secondCard;
+let lockboard = false;
 let hasFlipped = false;
 let cards = [...document.querySelectorAll(".inner")];
 console.log(cards);
@@ -21,8 +22,8 @@ const randomCsa = () => {
 
 randomCsa();
 
-let flipImg = document.querySelector(".inner");
 const flipCard = function () {
+  if (lockboard) return;
   if (!hasFlipped) {
     this.classList.add("is-flipped");
     hasFlipped = true;
@@ -34,7 +35,10 @@ const flipCard = function () {
   }
 };
 
-
+function unflipCards() {
+  if()
+  cards.forEach((card) => card.addEventListener("click"));
+}
 cards.forEach((card) => card.addEventListener("click", flipCard));
 
 // По клику по карточке карточки должны переворачиваться //
