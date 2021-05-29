@@ -8,9 +8,7 @@ console.log(cards);
 const randomCsa = () => {
   cards.map(
     (card) =>
-      (card.style.backgroundColor = `rgb(${Math.floor(
-        Math.random() * 255
-      )}, ${Math.floor(Math.random() * 255)}, ${Math.floor(
+      (card.style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(
         Math.random() * 255
       )})`)
   );
@@ -39,16 +37,6 @@ const flipCard = function () {
 
 
 cards.forEach((card) => card.addEventListener("click", flipCard));
-
-
-
-
-
-
-
-
-
-
 
 
 // let start_game = document.querySelector('#start_button');
