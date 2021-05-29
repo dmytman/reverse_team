@@ -1,6 +1,6 @@
-let firstCard;
-let secondCard;
-let lockboard = false;
+// let firstCard;
+let firstCard, secondCard;
+let lockBoard = false;
 let hasFlipped = false;
 let cards = [...document.querySelectorAll(".inner")];
 console.log(cards);
@@ -23,9 +23,10 @@ const randomCsa = () => {
 randomCsa();
 
 const flipCard = function () {
-  if (lockboard) return;
+  if (lockBoard) return;
+  if (this === firstCard) return;
+  this.classList.add("is-flipped");
   if (!hasFlipped) {
-    this.classList.add("is-flipped");
     hasFlipped = true;
     firstCard = this;
     return;
@@ -35,10 +36,26 @@ const flipCard = function () {
   }
 };
 
-function unflipCards() {
-  if()
-  cards.forEach((card) => card.addEventListener("click"));
-}
+
+
 cards.forEach((card) => card.addEventListener("click", flipCard));
 
+
+
+
+
+
+
+
+
+
+
+
+// let start_game = document.querySelector('#start_button');
+// start_game.addEventListener("click", function() {
+//   const audio = document.createElement('audio')
+//   audio.setAttribute('src', './sounds/zvuk-bomby.mp3')
+//   audio.setAttribute('autoplay', 'autoplay')
+// });
 // По клику по карточке карточки должны переворачиваться //
+// /* <audio src="./sounds/zvuk-bomby.mp3" autoplay="autoplay"></audio> */
