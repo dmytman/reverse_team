@@ -67,10 +67,9 @@ let audioGame = document.querySelector(".audio_game");
 let audioFlip = document.querySelector(".sound_flip");
 let start_game = document.querySelector('.start_button');
 
-start_game.addEventListener("click", function() {
-  // audioGame.setAttribute('autoplay', 'autoplay')
-  audioGame.play()
-});
+// start_game.addEventListener("click", function() {
+//   audioGame.play()
+// });
 // По клику по карточке карточки должны переворачиваться //
 
 const flipSound = function() {
