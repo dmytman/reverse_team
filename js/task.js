@@ -30,20 +30,51 @@ const flipCard = function () {
     return;
   } else {
     secondCard = this;
-    hasFlipped = false;
+    checkMatch()
   }
 };
 
+function checkMatch() {
+  if(firstCard.dataset.work === secondCard.dataset.work) {
+    return disableCards()
+  } else{
+    unflipCards()
+  }
+  }
 
+
+function disableCards() {
+  firstCard.removeEventListener('click', flipCard);
+  secondCard.removeEventListener('click', flipCard);
+  resetBoard()
+}
+
+function unflipCards() {
+  setTimeout(() => {
+    firstCard.classList.remove('is-flipped');
+    secondCard.classList.remove('is-flipped');
+  }, 1500);
+}
+
+function resetBoard() {
+  [hasFlipped, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null];
+}
 
 cards.forEach((card) => card.addEventListener("click", flipCard));
 
+let audioGame = document.querySelector(".audio_game");
+let audioFlip = document.querySelector(".sound_flip");
+let start_game = document.querySelector('.start_button');
 
-// let start_game = document.querySelector('#start_button');
-// start_game.addEventListener("click", function() {
-//   const audio = document.createElement('audio')
-//   audio.setAttribute('src', './sounds/zvuk-bomby.mp3')
-//   audio.setAttribute('autoplay', 'autoplay')
-// });
+start_game.addEventListener("click", function() {
+  // audioGame.setAttribute('autoplay', 'autoplay')
+  audioGame.play()
+});
 // По клику по карточке карточки должны переворачиваться //
-// /* <audio src="./sounds/zvuk-bomby.mp3" autoplay="autoplay"></audio> */
+
+const flipSound = function() {
+  audioFlip.play()
+}
+cards.forEach(card => card.addEventListener('click', flipSound))
+// sound_flip
