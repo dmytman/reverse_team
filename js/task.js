@@ -40,7 +40,7 @@ function checkMatch() {
   } else{
     unflipCards()
   }
-  }
+}
 
 
 function disableCards() {
@@ -53,6 +53,7 @@ function unflipCards() {
   setTimeout(() => {
     firstCard.classList.remove('is-flipped');
     secondCard.classList.remove('is-flipped');
+    resetBoard();
   }, 1500);
 }
 

@@ -81,16 +81,19 @@
 }
 
 .back {
-  background-color: orange; /* Green */
+  background-color: orange;
   border: none;
   color: white;
   padding: 20px 10px;
+  margin-top: 10px;
+  margin-left: 10px;
   text-align: center;
   text-decoration: none;
   font-size: 20px;
   text-transform: uppercase;
   font-weight: 600;
   border-radius: 42px;
+  margin-right: 1500px;
 }
 
 .sound {
@@ -104,13 +107,14 @@
   text-transform: uppercase;
   font-weight: 600;
   border-radius: 42px;
-  /* margin-left: 300px; */
-  /* justify-content: flex-end; */
+}
+
+.sound_control{
+  width: 40px;
 }
 
 .settings{
-    text-align: center;
-    position: fixed;
-    justify-content: flex-end;
-
+  text-align: center;
+  position: fixed;
 }
+
