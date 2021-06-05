@@ -15,6 +15,9 @@
 
   <body>
     <a class="back" id="back_button" href="./index.html">back</a>
+    <div class="timer_css">
+    <p class="timer" id="rocket"></p>
+  </div>
     <main class="main-lvl1">
       <div class="flex-container-1">
         <div class="inner" data-work="1">
@@ -102,12 +105,23 @@
         
       </div>
 
-      
-      <p class="paragraph" data-work="parag">&copy; reverse team</p>
+      <div id="openModalWin" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Название</h3>
+              <a href="#close" title="Close" class="close">×</a>
+            </div>
+            <div class="modal-body">    
+              <p>Содержимое модального окна...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="paragraph">&copy; reverse team</p>
       <!-- <audio id="sound"><source src="flip.mp3" type="audio/mp3"></audio>
       <input type="submit" value="Заказать билет" form="order_form" id="button" class="button" onclick="playSound('sound'); setTimeout('alert(\'Откладываем второе событие\')', 7000)""> -->
-
-
     </main>
     <audio src="./sounds/zvuk-bomby.mp3" class="audio_game_lvl"></audio>
     <audio src="./sounds/flip_card.mp3" class="sound_flip"></audio>

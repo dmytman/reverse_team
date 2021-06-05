@@ -97,8 +97,14 @@
   position: fixed;
 }
 
-.settings{
-  text-align: center;
-  position: fixed;
+.timer_css{
+  margin-left: 1634px;
 }
 
+.timer{
+  position: fixed;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 10px;
+}

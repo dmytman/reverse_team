@@ -3,7 +3,7 @@ let firstCard, secondCard;
 let lockBoard = false;
 let hasFlipped = false;
 let cards = [...document.querySelectorAll(".inner")];
-console.log(cards);
+// console.log(cards);
 
 const randomCsa = () => {
   cards.map(
@@ -30,13 +30,15 @@ const flipCard = function () {
     return;
   } else {
     secondCard = this;
+    lockBoard = true;
     checkMatch()
   }
 };
 
 function checkMatch() {
   if(firstCard.dataset.work === secondCard.dataset.work) {
-    return disableCards()
+    disableCards()
+    return;
   } else{
     unflipCards()
   }
@@ -78,3 +80,19 @@ const flipSound = function() {
 }
 cards.forEach(card => card.addEventListener('click', flipSound))
 // sound_flip
+
+// timer
+let timer; // пока пустая переменная
+let x = 90; // стартовое значение обратного отсчета
+countdown(); // вызов функции
+function countdown(){  // функция обратного отсчета
+  document.getElementById('rocket').innerHTML = x;
+  x--; // уменьшаем число на единицу
+  if (x<0){
+    clearTimeout(timer); // таймер остановится на нуле
+    alert('вы проиграли');
+  }
+  else {
+    timer = setTimeout(countdown, 1000);
+  }
+}
