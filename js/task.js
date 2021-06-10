@@ -69,10 +69,6 @@ cards.forEach((card) => card.addEventListener("click", flipCard));
 let audioGame = document.querySelector(".audio_game");
 let audioFlip = document.querySelector(".sound_flip");
 let start_game = document.querySelector('.start_button');
-
-// start_game.addEventListener("click", function() {
-//   audioGame.play()
-// });
 // По клику по карточке карточки должны переворачиваться //
 
 const flipSound = function() {
@@ -82,17 +78,25 @@ cards.forEach(card => card.addEventListener('click', flipSound))
 // sound_flip
 
 // timer
-let timer; // пока пустая переменная
-let x = 90; // стартовое значение обратного отсчета
-countdown(); // вызов функции
-function countdown(){  // функция обратного отсчета
-  document.getElementById('rocket').innerHTML = x;
-  x--; // уменьшаем число на единицу
-  if (x<0){
-    clearTimeout(timer); // таймер остановится на нуле
-    alert('вы проиграли');
-  }
-  else {
-    timer = setTimeout(countdown, 1000);
+let time = 90;
+const countDownEl = document.getElementById("countdown");
+
+const myInterval = setInterval(updateCountdown, 1000);
+function updateCountdown() {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+  seconds = seconds < 10 ? "0" + seconds:
+  seconds;
+  countDownEl.innerHTML = `${minutes}:${seconds}`;
+  time--;
+  if(time<0) {
+    clearInterval(myInterval);
+    console.log('time up')
   }
 }
+let sounds = document.querySelector('.sound_boom');
+const soundMedium = document.querySelector('#medium');
+
+soundMedium.addEventListener('click', function(){
+  sounds.play()
+})

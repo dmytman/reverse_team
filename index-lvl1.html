@@ -15,8 +15,9 @@
 
   <body>
     <a class="back" id="back_button" href="./index.html">back</a>
+    <img  src="./images/volume-medium.png" alt="medium" class="sound" id="medium">
     <div class="timer_css">
-    <p class="timer" id="rocket"></p>
+    <p id="countdown" class="count"></p>
   </div>
     <main class="main-lvl1">
       <div class="flex-container-1">
@@ -118,13 +119,14 @@
           </div>
         </div>
       </div>
-
+<a href="#openModalWin"></a>
       <p class="paragraph">&copy; reverse team</p>
       <!-- <audio id="sound"><source src="flip.mp3" type="audio/mp3"></audio>
       <input type="submit" value="Заказать билет" form="order_form" id="button" class="button" onclick="playSound('sound'); setTimeout('alert(\'Откладываем второе событие\')', 7000)""> -->
     </main>
     <audio src="./sounds/zvuk-bomby.mp3" class="audio_game_lvl"></audio>
     <audio src="./sounds/flip_card.mp3" class="sound_flip"></audio>
+    <audio src="./sounds/zvuk-bomby.mp3" class="sound_boom"></audio>
     <script src="./js/task.js" type="module"></script>
   </body>
 </html>
